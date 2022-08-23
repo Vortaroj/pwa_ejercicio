@@ -1,5 +1,9 @@
+const url = window.location.href;
+const swLocation = url.includes('localhost') ? '/sw.js' : '/pwa_ejercicio/sw.js';
+
+
 if( navigator.serviceWorker ) {
-    navigator.serviceWorker.register("sw.js");
+    navigator.serviceWorker.register(swLocation);
 }
 // Referencias de jQuery
 
