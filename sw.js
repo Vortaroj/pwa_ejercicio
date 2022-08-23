@@ -4,9 +4,9 @@ importScripts ('js/sw-utils.js');
 const rootInit = window.location.href.includes('localhost') ? '/' : '';
 
 
-const CACHE_STATIC      = "static-v1";
-const CACHE_DYNAMIC     = "dynamic-v1";
-const CACHE_INMUTABLE   = "inmutable=v1";
+const CACHE_STATIC      = "static-v2";
+const CACHE_DYNAMIC     = "dynamic-v2";
+const CACHE_INMUTABLE   = "inmutable-v1";
 
 const STATIC_CONTENT = [
 
@@ -57,6 +57,10 @@ self.addEventListener('activate', e => {
             keys.forEach( key => {
 
                 if( key !== CACHE_STATIC && key.includes('static')) {
+                    return caches.delete(key);
+                }
+
+                if ( key !== CACHE_DYNAMIC && key.includes('dynamic')) {
                     return caches.delete(key);
                 }
 
