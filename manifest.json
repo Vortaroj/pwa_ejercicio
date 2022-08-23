@@ -2,9 +2,9 @@
 
     "short-name": "Twittor",
     "name": "Twitter para héroes",
-    "start-url": "/index.html",
-    "background_color": "#3498db",
-    "theme_color": "#3498db",
+    "start-url": "index.html",
+    "background-color": "#3498db",
+    "theme-color": "#3498db",
     "display": "standalone",
     "orientation": "portrait",
     "icons": [
