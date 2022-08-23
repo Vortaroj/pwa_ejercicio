@@ -1,13 +1,16 @@
 //Importación de utils
 importScripts ('js/sw-utils.js');
 
+const rootInit = window.location.href.includes('localhost') ? '/' : '';
+
+
 const CACHE_STATIC      = "static-v1";
 const CACHE_DYNAMIC     = "dynamic-v1";
 const CACHE_INMUTABLE   = "inmutable=v1";
 
 const STATIC_CONTENT = [
 
-    '/',
+    rootInit ,
     'index.html',
     'css/style.css',
     'img/favicon.ico',
